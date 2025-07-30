@@ -23,7 +23,7 @@
       background-size: cover;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      min-height: 100vh;
     }
 
     header {
@@ -69,10 +69,11 @@
     .section {
       padding: 3rem 2rem;
       max-width: 800px;
+      width: 100%;
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Layer */
+      background-color: rgba(0, 0, 0, 0.5); /* halbtransparenter Layer */
       border-radius: 12px;
-      margin: 1rem;
+      margin: 1rem auto; /* zentriert */
     }
 
     .tokenomics {
@@ -88,6 +89,7 @@
       text-align: center;
       font-size: 0.9rem;
       color: #ccc;
+      margin-top: auto;
     }
 
     a {
