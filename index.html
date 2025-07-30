@@ -6,25 +6,24 @@
   <title>FIRSTIGNITER ($FRST)</title>
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html, body {
       height: 100%;
       width: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #ffffff;
       background: url('background_only.png') no-repeat center center fixed;
       background-size: cover;
+      overflow-x: hidden;
     }
 
     body {
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 100vh;
     }
 
     header {
@@ -48,8 +47,7 @@
       font-weight: 400;
       font-size: 1.3rem;
       color: #eeeeee;
-      margin-top: 0;
-      margin-bottom: 1rem;
+      margin: 1rem 0;
       text-align: center;
     }
 
@@ -74,6 +72,7 @@
       max-width: 800px;
       padding: 2rem;
       text-align: center;
+      color: #fff;
     }
 
     .tokenomics {
@@ -96,9 +95,41 @@
       color: #ff6a00;
       text-decoration: none;
     }
+
+    /* ✨ Raketen-Animation */
+    .rocket-fly {
+      position: fixed;
+      bottom: -150px; /* startet unterhalb des Viewports */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      animation: flyUp 5s ease-out forwards;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    @keyframes flyUp {
+      0% {
+        bottom: -150px;
+        opacity: 0;
+        transform: translateX(-50%) scale(0.5);
+      }
+      20% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+      }
+      100% {
+        bottom: 120%;
+        opacity: 0;
+        transform: translateX(-50%) scale(1.2);
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- 🚀 Raketenanimation -->
+  <img src="FirstIgniter.png" alt="Rocket" class="rocket-fly">
 
   <header>
     <img src="FirstIgniter.png" alt="$FRST Logo">
@@ -125,7 +156,7 @@
     <p>Add the token to your Solana wallet (e.g. Phantom), then trade on DEX.</p>
     <p><strong>Token Address:</strong> <em>[August 4th]</em></p>
 
-    <h2>📲 Join the Community</h2>
+    <h3>📲 Join the Community</h3>
     <p><a href="https://x.com/FIRSTIGNITER" target="_blank">Twitter</a></p>
   </div>
 
